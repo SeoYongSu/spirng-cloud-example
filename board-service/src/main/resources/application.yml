@@ -1,0 +1,18 @@
+
+server:
+  port: 0
+
+spring:
+  application:
+    name: board-service
+  cloud:
+    config:
+      enabled: false
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}

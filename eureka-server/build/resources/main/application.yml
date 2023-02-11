@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: discovery-config
+  profiles:
+    active: local
+  config:
+    import: optional:configserver:http://localhost:8888
+    enabled: true
+
+
+# spring cloud bootstrap? ??? ?? ?? ?? ??
+#  cloud:
+#    config:
+#      uri: http://localhost:8888

@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: git  # git or native
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/SeoYongsu/spirng-cloud-mas-example.git
+          default-label: main
+          search-paths: config-repository
+
+        #native:
+        #  search-locations: file://${user.home}/config
+
