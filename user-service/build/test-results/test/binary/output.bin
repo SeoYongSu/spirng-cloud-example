@@ -1,0 +1,31 @@
+W14:12:53.896 [Test worker] DEBUG reactor.util.Loggers - Using Slf4j logging framework
+„14:12:54.044 [Test worker] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+É14:12:54.104 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [1a6dc589] HTTP POST /login
+è14:12:54.113 [parallel-1] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Writing client request for  POST "/login"
+®14:12:54.138 [parallel-1] DEBUG org.springframework.http.codec.json.Jackson2JsonEncoder - [1a6dc589] Encoding [LoginRequest(username=testuser, password=testpassword)]
+ç14:12:54.144 [parallel-1] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Invoking HttpHandler for  POST "/login"
+~14:12:54.150 [parallel-1] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - [4465843f] HTTP POST "/login"
+ß14:12:54.177 [parallel-1] DEBUG org.springframework.http.codec.json.Jackson2JsonDecoder - [4465843f] Decoded [LoginRequest(username=testuser, password=testpassword)]
+ 14:12:54.187 [parallel-1] DEBUG org.springframework.http.codec.json.Jackson2JsonEncoder - [4465843f] Encoding [ApiResult(success=false, errorType=null, message=Î°úÍ∑∏Ïù∏ Ïã§Ìå®, val1=null, val2=null)]
+ë14:12:54.190 [parallel-1] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Creating client response for  POST "/login"
+Ü14:12:54.191 [parallel-1] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - [4465843f] Completed 401 UNAUTHORIZED
+ñ14:12:54.197 [parallel-1] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [1a6dc589] [357110cd] Response 401 UNAUTHORIZED
+w14:12:54.204 [Test worker] DEBUG org.springframework.core.codec.ResourceDecoder - [1a6dc589] [357110cd] Read 87 bytes
+q14:12:54.223 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['success']
+q14:12:54.225 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['message']
+„14:12:54.232 [Test worker] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+É14:12:54.234 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [7c52fc81] HTTP POST /login
+è14:12:54.234 [parallel-2] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Writing client request for  POST "/login"
+®14:12:54.234 [parallel-2] DEBUG org.springframework.http.codec.json.Jackson2JsonEncoder - [7c52fc81] Encoding [LoginRequest(username=testuser, password=testpassword)]
+ç14:12:54.235 [parallel-2] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Invoking HttpHandler for  POST "/login"
+~14:12:54.235 [parallel-2] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - [22a22fb7] HTTP POST "/login"
+ß14:12:54.236 [parallel-2] DEBUG org.springframework.http.codec.json.Jackson2JsonDecoder - [22a22fb7] Decoded [LoginRequest(username=testuser, password=testpassword)]
+ø14:12:54.239 [parallel-2] DEBUG org.springframework.http.codec.json.Jackson2JsonEncoder - [22a22fb7] Encoding [ApiDataResult(data=Token(accessToken=accessToken, refreshToken=refreshToken))]
+ë14:12:54.240 [parallel-2] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Creating client response for  POST "/login"
+|14:12:54.240 [parallel-2] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - [22a22fb7] Completed 200 OK
+å14:12:54.240 [parallel-2] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [7c52fc81] [69db9985] Response 200 OK
+x14:12:54.240 [Test worker] DEBUG org.springframework.core.codec.ResourceDecoder - [7c52fc81] [69db9985] Read 152 bytes
+q14:12:54.240 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['success']
+q14:12:54.240 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['message']
+}14:12:54.241 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['data']['accessToken']
+~14:12:54.241 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['data']['refreshToken']

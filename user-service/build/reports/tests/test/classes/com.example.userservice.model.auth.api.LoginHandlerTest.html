@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - LoginHandlerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>LoginHandlerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.example.userservice.model.auth.api.html">com.example.userservice.model.auth.api</a> &gt; LoginHandlerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.683s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">로그인 성공</td>
+<td class="success">login_Success()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">로그인 실패</td>
+<td class="success">login_Unauthorized()</td>
+<td class="success">0.672s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:12:53.896 [Test worker] DEBUG reactor.util.Loggers - Using Slf4j logging framework
+14:12:54.044 [Test worker] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+14:12:54.104 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [1a6dc589] HTTP POST /login
+14:12:54.113 [parallel-1] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Writing client request for  POST &quot;/login&quot;
+14:12:54.138 [parallel-1] DEBUG org.springframework.http.codec.json.Jackson2JsonEncoder - [1a6dc589] Encoding [LoginRequest(username=testuser, password=testpassword)]
+14:12:54.144 [parallel-1] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Invoking HttpHandler for  POST &quot;/login&quot;
+14:12:54.150 [parallel-1] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - [4465843f] HTTP POST &quot;/login&quot;
+14:12:54.177 [parallel-1] DEBUG org.springframework.http.codec.json.Jackson2JsonDecoder - [4465843f] Decoded [LoginRequest(username=testuser, password=testpassword)]
+14:12:54.187 [parallel-1] DEBUG org.springframework.http.codec.json.Jackson2JsonEncoder - [4465843f] Encoding [ApiResult(success=false, errorType=null, message=로그인 실패, val1=null, val2=null)]
+14:12:54.190 [parallel-1] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Creating client response for  POST &quot;/login&quot;
+14:12:54.191 [parallel-1] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - [4465843f] Completed 401 UNAUTHORIZED
+14:12:54.197 [parallel-1] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [1a6dc589] [357110cd] Response 401 UNAUTHORIZED
+14:12:54.204 [Test worker] DEBUG org.springframework.core.codec.ResourceDecoder - [1a6dc589] [357110cd] Read 87 bytes
+14:12:54.223 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['success']
+14:12:54.225 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['message']
+14:12:54.232 [Test worker] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+14:12:54.234 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [7c52fc81] HTTP POST /login
+14:12:54.234 [parallel-2] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Writing client request for  POST &quot;/login&quot;
+14:12:54.234 [parallel-2] DEBUG org.springframework.http.codec.json.Jackson2JsonEncoder - [7c52fc81] Encoding [LoginRequest(username=testuser, password=testpassword)]
+14:12:54.235 [parallel-2] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Invoking HttpHandler for  POST &quot;/login&quot;
+14:12:54.235 [parallel-2] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - [22a22fb7] HTTP POST &quot;/login&quot;
+14:12:54.236 [parallel-2] DEBUG org.springframework.http.codec.json.Jackson2JsonDecoder - [22a22fb7] Decoded [LoginRequest(username=testuser, password=testpassword)]
+14:12:54.239 [parallel-2] DEBUG org.springframework.http.codec.json.Jackson2JsonEncoder - [22a22fb7] Encoding [ApiDataResult(data=Token(accessToken=accessToken, refreshToken=refreshToken))]
+14:12:54.240 [parallel-2] DEBUG org.springframework.test.web.reactive.server.HttpHandlerConnector - Creating client response for  POST &quot;/login&quot;
+14:12:54.240 [parallel-2] DEBUG org.springframework.web.server.adapter.HttpWebHandlerAdapter - [22a22fb7] Completed 200 OK
+14:12:54.240 [parallel-2] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [7c52fc81] [69db9985] Response 200 OK
+14:12:54.240 [Test worker] DEBUG org.springframework.core.codec.ResourceDecoder - [7c52fc81] [69db9985] Read 152 bytes
+14:12:54.240 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['success']
+14:12:54.240 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['message']
+14:12:54.241 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['data']['accessToken']
+14:12:54.241 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['data']['refreshToken']
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6</a> at 2023. 2. 9. 오후 2:12:54</p>
+</div>
+</div>
+</body>
+</html>
