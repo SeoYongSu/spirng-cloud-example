@@ -4,10 +4,10 @@ Reactive를 활용<br/>
 
 서비스 목록<br/>
 1) User service(webflux) : 사용자 및 인증관련 서비스 예제<br/>
-Spring Security 관련 예제 소스
-&#9;RouterConfig에 Handler Commpornet 등록 후 URI 설정<br/>
-&#9;api List<br/>
-&#9;Handelr<br/>
+Spring Security 관련 설정
+RouterConfig에 Handler Commpornet 등록 후 URI 설정<br/>
+api List<br/>
+ Handelr<br/>
       - 회원가입<br/>
       - 로그<br/>
       - oauth 로그인<br/>
