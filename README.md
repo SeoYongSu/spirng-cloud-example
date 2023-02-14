@@ -1,10 +1,10 @@
 # spirng-cloud-mas-example
-spring cloud msa example 연습<br/>
+spring cloud msa example<br/>
 Reactive를 활용<br/>
 
 서비스 목록<br/>
-User service : Webflux 사용<br/> 사용자 및 인증관련 서비스 샘플<br/>
-&#9;Spring Security 관련 예제 소스<br/>
+1) User service(webflux) : 사용자 및 인증관련 서비스 예제<br/>
+Spring Security 관련 예제 소스
 &#9;RouterConfig에 Handler Commpornet 등록 후 URI 설정<br/>
 &#9;api List<br/>
 &#9;Handelr<br/>
