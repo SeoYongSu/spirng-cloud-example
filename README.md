@@ -3,7 +3,7 @@ spring cloud msa example<br/>
 Reactive를 활용<br/>
 
 
-# User service(webflux) : 사용자 및 인증관련 서비스 예제<br/>
++ User service(webflux) : 사용자 및 인증관련 서비스 예제<br/>
 Spring Security 관련 설정
 RouterConfig에 Handler Commpornet 등록 후 URI 설정<br/>
  Handelr<br/>
@@ -15,7 +15,7 @@ RouterConfig에 Handler Commpornet 등록 후 URI 설정<br/>
     - 유저의 board 목록연결 -> WebClient Example<br/>
     
     
-# gateway  : Api-Gateway 예제로만 사용<br/>
++ gateway  : Api-Gateway 예제로만 사용<br/>
 
     yml로 설정한 URL
       Board Service 
