@@ -1,3 +1,6 @@
+server:
+  port: 80
+
 spring:
   application:
     name: api-gateway
@@ -5,6 +8,27 @@ spring:
   cloud:
     config:
       enabled: false
+    gateway:
+      routes:
+        # Board Service Router 처리
+        - id: board-service
+          uri: lb://BOARD-SERVICE/
+          predicates:
+            - Path=/board
+        - id: userBoard-Service
+          uri: lb://USER-SERVICE/
+          predicates:
+            - Path=/userboard
+
+
+
+      default-filters:
+        - name: GlobalFilter  #Global filter class 파일 명
+          args:               #파라미터로 전달될 값 정의
+            baseMessage: /(?<segment>.*),/$\{segment}y
+            preLogger: true
+            postLogger: true
+
 
 
 eureka:
@@ -13,3 +37,5 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.instance_id:${random.value}}
