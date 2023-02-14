@@ -1,19 +1,16 @@
 package com.example.userservice.model.user.service.imp;
 
-import com.example.userservice.app.lib.StrLib;
 import com.example.userservice.app.security.UserPrincipal;
 import com.example.userservice.app.security.oauth.user.OAuth2Attributes;
 import com.example.userservice.model.user.domain.User;
 import com.example.userservice.model.user.repository.ReactiveUserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultReactiveOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.client.userinfo.ReactiveOAuth2UserService;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.OAuth2Error;
-import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
@@ -39,7 +36,7 @@ public class ReactiveOAuth2UserServiceImp implements ReactiveOAuth2UserService<O
              * OAtuh2 Provider의 필수데이터 확인
              * 서드파티 validation Check
              */
-            if(StrLib.isEmptyStr(userInfo.getEmail())) {
+            if(userInfo.getEmail()==null) {
                 OAuth2Error error = new OAuth2Error("providerNoData");
                 return Mono.error(new Exception("OAUTH2공급자" + providerType +"에서  Email정보를 찾을수 없습니다."));
             }

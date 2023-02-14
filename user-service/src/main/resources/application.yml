@@ -7,8 +7,8 @@ spring:
   profiles:
     active: local
   config:
-    import: optional:configserver:http://localhost:8888
-    enabled: false
+    import: optional:configserver:http://localhost:8888   #Config server
+    enabled: true
 
   data:
     mongodb:
@@ -27,17 +27,38 @@ spring:
       client:
         registration:
           kakao:
-           
+            client-name: Kakao
+            client-id: 182aa593d6c9dd9a5ab2c20104a1ce9b
+            redirect-uri: '{baseUrl}/{action}/oauth2/code/{registrationId}'
+#            redirect-uri: "http://localhost:80/{action}/oauth2/code/{registrationId}"
+            client-authentication-method: POST
+            authorization-grant-type: authorization_code
+            scope: profile_nickname, account_email
 
           naver:
-           
+            client-name: Naver
+            client-id: UE2XIVBkw89rDhSDbSe4
+            client-secret: sJkHASTjKZ
+#            redirect-uri: "http://localhost:80/{action}/oauth2/code/{registrationId}"
+            redirect-uri: "{baseUrl}/{action}/oauth2/code/{registrationId}"          # (== http://localhost:80/login/oauth2/code/naver) 게이트에이 하드코딩방식
+            authorization-grant-type: authorization_code
+            scope: name, email
 
           google:
-           
+            client-name: google
+            client-id: 129842654485-c84i13kt2mj4kghbq25kbn4t2kdjh97b.apps.googleusercontent.com
+            client-secret: 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
+            #default http://localhost:8080/login/oauth2/code/google
+            redirect-uri: "{baseUrl}/{action}/oauth2/code/{registrationId}"
+            scope:
+              - email
+              - profile
 
         provider:
           kakao:
+            #여기를 lb://API-GATEWAY
             authorization-uri: https://kauth.kakao.com/oauth/authorize    #카카오 login Page
+
             token-uri: https://kauth.kakao.com/oauth/token
             user-info-uri: https://kapi.kakao.com/v2/user/me
             user-name-attribute: id
@@ -50,14 +71,16 @@ spring:
 
 app:
   jwt:
-    secretKey: 12345-12345-12345-123345
+    secretKey: 239192-3999-01002-39123
     ACCESS_TOKEN_EXPIRE_TIME: 1800000    # 1000 * 60 * 30   30분
     REFRESH_TOKEN_EXPIRE_TIME: 3600000   # 1000 * 60 * 60   60분
 
-#?? ????
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+

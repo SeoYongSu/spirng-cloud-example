@@ -5,13 +5,10 @@ import com.example.userservice.model.user.domain.User;
 import com.example.userservice.model.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
-
-import java.security.Principal;
 
 
 @Component("UserHandler")
@@ -21,6 +18,9 @@ public class UserHandler {
 
     private final UserService userService;
 
+    /**
+     * GET /my
+     */
     public Mono<ServerResponse> getInfo(ServerRequest request){
 
         Mono<UserData> result = request.principal()

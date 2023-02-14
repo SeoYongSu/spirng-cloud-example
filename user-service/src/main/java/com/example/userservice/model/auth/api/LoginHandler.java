@@ -6,7 +6,6 @@ import com.example.userservice.model.ApiResult;
 import com.example.userservice.model.auth.data.LoginRequest;
 
 import com.example.userservice.model.auth.data.Token;
-import com.example.userservice.model.auth.service.AccessTokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;
