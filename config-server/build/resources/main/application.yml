@@ -14,6 +14,7 @@ spring:
           uri: https://github.com/SeoYongsu/spirng-cloud-mas-example.git
           default-label: main
           search-paths: config-repository
+
         #native:
         #  search-locations: file://${user.home}/config
 
