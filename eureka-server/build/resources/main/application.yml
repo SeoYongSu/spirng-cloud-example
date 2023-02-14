@@ -6,10 +6,12 @@ spring:
     active: local
   config:
     import: optional:configserver:http://localhost:8888
-    enabled: true
-
+    enabled: false
 
 # spring cloud bootstrap? ??? ?? ?? ?? ??
 #  cloud:
 #    config:
 #      uri: http://localhost:8888
+
+
+
