@@ -2,7 +2,7 @@
 spirng-cloud-mas-example
 
 
-User service : 사용자 및 인증관련 서비스 샘플
+User service : Webflux 사용<br/> 사용자 및 인증관련 서비스 샘플
  #Spring Security 관련 예제 소스
  #RouterConfig에 Handler Commpornet 등록 후 URI 설정
  api List
