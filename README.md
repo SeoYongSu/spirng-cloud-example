@@ -8,14 +8,14 @@ Spring Security 관련 설정
 RouterConfig에 Handler Commpornet 등록 후 URI 설정<br/>
  Handelr<br/>
       - 회원가입<br/>
-      - 로그<br/>
+      - 로그인<br/>
       - oauth 로그인<br/>
       - 유저 상세정보<br/>
  Controller<br/>
     - 유저의 board 목록연결 -> WebClient Example<br/>
     
     
-# gateway  : Api-Gateway 예제로만 사<br/>
+# gateway  : Api-Gateway 예제로만 사용<br/>
 
     yml로 설정한 URL
       Board Service 
