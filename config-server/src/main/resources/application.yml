@@ -11,7 +11,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/SeoYongsu/spirng-cloud-mas-example.git
+          uri: https://github.com/SeoYongsu/spirng-cloud-example.git
           default-label: main
           search-paths: config-repository
 
