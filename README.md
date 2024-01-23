@@ -1,6 +1,6 @@
 # spirng-cloud-example
 정리중
-spring cloud msa example<br/>
+spring cloudexample<br/>
 Reactive를 활용<br/>
 
 
